@@ -6,13 +6,14 @@
 /*   By: romain <romain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 11:19:04 by rdupeux           #+#    #+#             */
-/*   Updated: 2024/01/01 17:57:08 by romain           ###   ########.fr       */
+/*   Updated: 2024/01/01 18:05:30 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LST_H
 # define FT_LST_H
 # include <stdlib.h>
+
 typedef struct s_lst
 {
 	struct s_lst	*next;
