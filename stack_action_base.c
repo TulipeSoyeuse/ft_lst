@@ -6,12 +6,15 @@
 /*   By: romain <romain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 11:35:49 by rdupeux           #+#    #+#             */
-/*   Updated: 2024/01/01 17:56:29 by romain           ###   ########.fr       */
+/*   Updated: 2024/01/02 21:04:29 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_lst.h"
 
+/// @brief add a new node at the start of the list
+/// @param stack list
+/// @param to_append node to append at the start of the list
 void	appendleft(t_lst **stack, t_lst *to_append)
 {
 	if (!(*stack))
@@ -28,6 +31,9 @@ void	appendleft(t_lst **stack, t_lst *to_append)
 	*stack = to_append;
 }
 
+/// @brief add a new node at the end of the list
+/// @param stack list
+/// @param to_append node to append at the end of the list
 void	append(t_lst **stack, t_lst *to_append)
 {
 	if (!(*stack))
@@ -43,6 +49,10 @@ void	append(t_lst **stack, t_lst *to_append)
 	(*stack)->prev = to_append;
 }
 
+/// @brief remove the first node of the list
+/// ( node is not destroyed only removed from the list)
+/// @param stack lst
+/// @return	the removed node adress;
 t_lst	*popleft(t_lst **stack)
 {
 	t_lst	*to_pop;
@@ -61,6 +71,10 @@ t_lst	*popleft(t_lst **stack)
 	return (to_pop);
 }
 
+/// @brief remove the last node of the list
+/// ( node is not destroyed only removed from the list)
+/// @param stack lst
+/// @return	the removed node adress;
 t_lst	*pop(t_lst **stack)
 {
 	t_lst	*to_pop;
