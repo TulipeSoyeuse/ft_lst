@@ -6,14 +6,15 @@
 /*   By: romain <romain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 11:35:49 by rdupeux           #+#    #+#             */
-/*   Updated: 2024/01/02 21:04:29 by romain           ###   ########.fr       */
+/*   Updated: 2024/01/02 21:13:29 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_lst.h"
 
 /// @brief add a new node at the start of the list
-/// @param stack list
+/// @param stack list, if list is NULL, return an initialised list with
+/// to_append as it's only member
 /// @param to_append node to append at the start of the list
 void	appendleft(t_lst **stack, t_lst *to_append)
 {
@@ -32,7 +33,8 @@ void	appendleft(t_lst **stack, t_lst *to_append)
 }
 
 /// @brief add a new node at the end of the list
-/// @param stack list
+/// @param stack list, if list is NULL, return an initialised list with
+/// to_append as it's only member
 /// @param to_append node to append at the end of the list
 void	append(t_lst **stack, t_lst *to_append)
 {
