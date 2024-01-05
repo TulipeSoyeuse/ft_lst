@@ -6,7 +6,7 @@
 /*   By: romain <romain@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 12:36:31 by rdupeux           #+#    #+#             */
-/*   Updated: 2024/01/02 21:00:39 by romain           ###   ########.fr       */
+/*   Updated: 2024/01/05 19:12:08 by romain           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ void	free_lst(t_lst *lst, void (*f)(void *))
 	while (len--)
 	{
 		next = lst->next;
-		free(lst);
 		f(lst->data);
+		free(lst);
 		lst = next;
 	}
 }
